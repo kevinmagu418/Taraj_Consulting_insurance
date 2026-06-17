@@ -78,8 +78,8 @@ export function WhyUs() {
             </div>
             
             <div className="absolute -top-6 -right-6 bg-blue-dark text-white p-8 rounded-2xl shadow-xl flex flex-col items-center justify-center z-20">
-              <span className="text-4xl font-black">10+</span>
-              <span className="text-xs font-bold uppercase tracking-widest text-center">Years of<br />Excellence</span>
+              <span className="text-3xl font-black">2026</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-center mt-1">Established</span>
             </div>
           </div>
         </div>
