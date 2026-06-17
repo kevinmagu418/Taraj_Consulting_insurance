@@ -67,7 +67,7 @@ export function WhyUs() {
           <div className="lg:w-2/3 relative w-full">
             <div className="aspect-[16/9] md:aspect-square lg:aspect-[16/9] rounded-[40px] bg-slate-100 overflow-hidden shadow-2xl relative group">
                <Image
-                src="/images/whyus.webp"
+                src="/images/whyus.jpg"
                 alt="Expert insurance advisors at Taraj Consulting Ltd"
                 fill
                 loading="lazy"

@@ -91,7 +91,7 @@ export function ServicesGrid() {
               </Link>
 
               {/* Masked Circular Image for each Card */}
-              <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full overflow-hidden border-8 border-white/50 opacity-20 group-hover:opacity-100 transition-opacity duration-700 md:block hidden">
+              <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full overflow-hidden border-8 border-white/50 md:block hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
