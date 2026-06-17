@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/layout/page-hero";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, FileText, CheckCircle, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,32 +7,61 @@ import { siteConfig } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch with Taraj Consulting Ltd for expert insurance advisory, quotes, and support in Nairobi, Kenya.",
+  title: "Contact Us & Claims Assistance",
+  description: "Get in touch with Taraj Consulting Ltd for expert insurance advisory, quotes, support, and help with your claims in Nairobi, Kenya.",
 };
+
+const claimSteps = [
+  { title: "Report", description: "Notify us immediately.", icon: ShieldAlert },
+  { title: "Document", description: "Gather necessary evidence.", icon: FileText },
+  { title: "Evaluate", description: "Our team evaluates loss.", icon: Clock },
+  { title: "Settle", description: "Receive compensation.", icon: CheckCircle },
+];
 
 export default function ContactPage() {
   return (
     <>
       <PageHero 
-        title="Contact Us"
-        subtitle="GET IN TOUCH"
-        description="Have any questions? We are here to help you find the best insurance coverage for your needs."
+        title="Contact & Claims"
+        subtitle="WE ARE HERE FOR YOU"
+        description="Need support or help with a claim? Our team is ready to assist you anytime."
       />
 
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Our Claims Process</h2>
+            <p className="text-muted-foreground text-lg">
+              We make filing a claim simple and transparent.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+            {claimSteps.map((step, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-8 bg-slate-50 rounded-3xl border">
+                <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                  <step.icon className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div className="space-y-12">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Let&apos;s Talk</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Whether you&apos;re looking for a quote, have a question about your policy, 
+                  Whether you&apos;re looking for an advisory, have a question about your policy, 
                   or need help with a claim, our team is ready to assist you.</p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {/* ... (existing contact info) */}
                 <div className="space-y-4">
                   <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                     <Phone className="h-6 w-6" />
@@ -117,7 +146,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-[500px] w-full relative overflow-hidden bg-background">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.810565863923!2d36.80481237586561!3d-1.2878051356345472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d0f2526e95%3A0x6b2e3f56e9c1e7a!2sKabarnet%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1718545000000!5m2!1sen!2ske"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.20235372439!2d36.79093847832031!3d-1.2618991000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1737e5c9a72f%3A0x6b2e3f56e9c1e7a!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1718545000000!5m2!1sen!2ske"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -125,7 +154,7 @@ export default function ContactPage() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Taraj Consulting Ltd Office Location"
-          className="filter grayscale contrast-125 opacity-80 hover:opacity-100 transition-opacity duration-500"
+          className="w-full h-full"
         ></iframe>
       </section>
     </>

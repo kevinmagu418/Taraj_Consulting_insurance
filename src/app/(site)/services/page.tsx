@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/layout/page-hero";
 import { ServicesSection } from "@/components/sections/services-section";
+import { PoliciesGrid } from "@/components/sections/policies-grid/policies-grid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,8 @@ export default function ServicesPage() {
       />
       
       <ServicesSection />
+
+      <PoliciesGrid />
 
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">

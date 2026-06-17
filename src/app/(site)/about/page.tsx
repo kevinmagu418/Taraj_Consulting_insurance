@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       <PageHero 
         title="About Taraj Consulting"
-        subtitle="Founded in 2023. Fully digital. Based in Nairobi."
+        subtitle="Founded in 2026. Fully digital. Based in Nairobi."
         description="Taraj Consulting Ltd was created to bring a fresh, digital-first approach to insurance in Kenya. We connect you with top licensed insurers for instant peace of mind."
       />
       
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <div className="lg:w-1/2">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Founded in 2023 and based in Nairobi, Taraj Consulting Ltd was created to bring a fresh, digital-first approach to insurance in Kenya.
+                Founded in 2026 and based in Nairobi, Taraj Consulting Ltd was created to bring a fresh, digital-first approach to insurance in Kenya.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 We believe getting insured should be fast, simple, and accessible — from any device. 
@@ -61,9 +61,9 @@ export default function AboutPage() {
             
             <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-8 bg-muted rounded-2xl border flex flex-col items-center text-center">
-                <div className="text-5xl font-black text-primary mb-2">20+</div>
+                <div className="text-5xl font-black text-primary mb-2">Expert</div>
                 <div className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
-                  Years of Combined Experience
+                  Industry Guidance
                 </div>
               </div>
               <div className="p-8 bg-primary text-white rounded-2xl flex flex-col items-center text-center">

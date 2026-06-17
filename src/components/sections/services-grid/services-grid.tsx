@@ -18,6 +18,7 @@ const services = [
     description: "Comprehensive covers for your vehicles, property, and travel needs with instant digital processing.",
     icon: Car,
     href: "/services",
+    image: "/images/general-insurance.jpg",
   },
   {
     title: "Medical Insurance",
@@ -25,6 +26,7 @@ const services = [
     description: "Access premium healthcare networks with flexible inpatient and outpatient covers for all stages of life.",
     icon: HeartPulse,
     href: "/services",
+    image: "/images/medical-insurance.jpg",
   },
   {
     title: "Corporate Advisory",
@@ -32,7 +34,7 @@ const services = [
     description: "Strategic financial planning and group insurance solutions designed for the modern Kenyan enterprise.",
     icon: Briefcase,
     href: "/services",
-    isSpecial: true,
+    image: "/images/corporate-advisory.jpg",
   },
 ];
 
@@ -88,18 +90,16 @@ export function ServicesGrid() {
                 <ChevronRight size={16} className="ml-1 transition-transform group-hover/link:translate-x-1" />
               </Link>
 
-              {/* Special Masked Circular Image for 3rd Card */}
-              {service.isSpecial && (
-                <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full overflow-hidden border-8 border-white/50 opacity-20 group-hover:opacity-100 transition-opacity duration-700 md:block hidden">
-                  <Image
-                    src="/images/circle.avif"
-                    alt="Corporate mask"
-                    fill
-                    loading="lazy"
-                    className="object-cover"
-                  />
-                </div>
-              )}
+              {/* Masked Circular Image for each Card */}
+              <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full overflow-hidden border-8 border-white/50 opacity-20 group-hover:opacity-100 transition-opacity duration-700 md:block hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  loading="lazy"
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
           ))}
         </div>

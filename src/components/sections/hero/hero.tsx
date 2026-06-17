@@ -43,7 +43,7 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-blue-primary hover:bg-blue-dark text-white rounded-full px-10 h-14 text-lg font-bold shadow-xl shadow-blue-primary/20">
-                Get A Quote
+                Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="border-blue-dark/20 text-blue-dark hover:bg-blue-dark/5 rounded-full px-10 h-14 text-lg font-bold">
@@ -96,7 +96,7 @@ export function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 border border-blue-dark/5 hidden md:block"
               >
-                <div className="text-blue-dark font-black text-2xl">2023</div>
+                <div className="text-blue-dark font-black text-2xl">2026</div>
                 <div className="text-[10px] uppercase font-bold text-blue-primary tracking-widest mt-1">Established</div>
               </motion.div>
             </div>
